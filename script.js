@@ -1,4 +1,7 @@
-const h2 = document.createElement("h2");
-h2.textContent = "Thank you for visiting!";
+const para = document.querySelector('p');
 
-document.querySelector("body").appendChild(h2);
+para.addEventListener('click', updateName);
+
+function updateName() {
+  const name = prompt('Enter a new name');
+  para.textContent = `Player 1: ${name}`;
